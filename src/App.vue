@@ -1,28 +1,44 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <header class="header d-flex">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <p class="header-title">User Management System</p>
+          </div>
+        </div>
+      </div>
+    </header>
+    <Home></Home>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Home from '@/components/Home.vue'
 export default {
-  name: 'app',
+  name: "App",
   components: {
-    HelloWorld
+    Home
   }
-}
+};
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style lang="scss">
+@import 'assets/mixins.scss';
+html, body {
+  overflow-x: hidden;
+}
+
+.header {
+  padding: 10px 0;
+  background: $header-bg;
+
+  &-title {
+    color: $white;
+    font-size: 14px;
+    margin: 0;
+    font-weight: 400;
+    text-align: center;
+  }
 }
 </style>

@@ -1,5 +1,9 @@
 # user-management-app
 
+Built with:
+ - VueJS
+ - Bootstrap Vue
+
 ## Project setup
 ```
 npm install
